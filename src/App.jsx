@@ -1,12 +1,11 @@
 import './App.css'
-import {TorusKnot} from "./component/primitives/TorusKnot.js";
-import Sphere from "./component/materials/examples.js";
+import Cube6Textures from "./component/textures/Cube6Textures.js";
 
 function App() {
 
     return (
         <>
-            <Sphere/>
+            <Cube6Textures />
         </>
     )
 }
