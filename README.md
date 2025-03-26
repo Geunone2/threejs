@@ -1,6 +1,5 @@
 # Three.js 시작하기
 
----
 
 ## ✔️ Installation 설치
 
