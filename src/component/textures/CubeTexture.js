@@ -25,46 +25,46 @@ export default function CubeTexture() {
 
     // 텍스처 설정
     const loader = new THREE.TextureLoader();
-    const texture = loader.load('/banners/TsBanner.svg');
-    texture.colorSpace = THREE.SRGBColorSpace;
 
-    // 박스 크기 설정
-    const BoxGeometry = new THREE.BoxGeometry(14, 6, 6, 4, 4, 4);
+    // 텍스처가 로드될 때까지 대기
+    loader.load('/banners/TsBanner.svg', (texture) => {
+        texture.colorSpace = THREE.SRGBColorSpace;
+        // 박스 크기 설정
+        const BoxGeometry = new THREE.BoxGeometry(14, 6, 6, 4, 4, 4);
+        const BoxMaterial = new THREE.MeshBasicMaterial({map: texture});
 
-    const BoxMaterial = new THREE.MeshBasicMaterial({color: 0xFFFFFF, map: texture});
+        const cube = new THREE.Mesh(BoxGeometry, BoxMaterial);
 
-    const cube = new THREE.Mesh(BoxGeometry, BoxMaterial);
+        scene.add(cube);
 
-    scene.add(cube);
-
-    renderer.render(scene, camera);
-
-    function resizeRendererToDisplaySize(renderer) {
-        const canvas = renderer.domElement;
-        const width = canvas.clientWidth;
-        const height = canvas.clientHeight;
-        const needResize = canvas.width !== width || canvas.height !== height;
-        if (needResize) {
-            renderer.setSize(width, height, false);
-        }
-        return needResize;
-    }
-
-    function render(time) {
-        time *= 0.0002;
-
-        if (resizeRendererToDisplaySize(renderer)) {
+        function resizeRendererToDisplaySize(renderer) {
             const canvas = renderer.domElement;
-            camera.aspect = canvas.clientWidth / canvas.clientHeight;
-            camera.updateProjectionMatrix();
+            const width = canvas.clientWidth;
+            const height = canvas.clientHeight;
+            const needResize = canvas.width !== width || canvas.height !== height;
+            if (needResize) {
+                renderer.setSize(width, height, false);
+            }
+            return needResize;
         }
 
-        cube.rotation.y = time;
+        function render(time) {
+            time *= 0.0002;
 
-        renderer.render(scene, camera);
+            if (resizeRendererToDisplaySize(renderer)) {
+                const canvas = renderer.domElement;
+                camera.aspect = canvas.clientWidth / canvas.clientHeight;
+                camera.updateProjectionMatrix();
+            }
+
+            cube.rotation.y = time;
+
+            renderer.render(scene, camera);
+
+            requestAnimationFrame(render);
+        }
+
 
         requestAnimationFrame(render);
-    }
-
-    requestAnimationFrame(render);
+    });
 }

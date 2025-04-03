@@ -16,11 +16,15 @@ export default function Cube6Textures() {
 
     // 텍스처 설정
     const cubes = [];
-    const loader = new THREE.TextureLoader();
+
+    // 여러 텍스처가 로드될 때까지 대기
+    const loadManager = new THREE.LoadingManager();
+    const loader = new THREE.TextureLoader(loadManager);
 
     // 박스 크기 설정
     const boxGeometry = new THREE.BoxGeometry(5, 1, 5);
 
+    // 직육면체에 텍스처(이미지) 삽입
     const boxMaterials = [
         new THREE.MeshBasicMaterial({map: loadColorTexture('/banners/JavaBanner.png')}),
         new THREE.MeshBasicMaterial({map: loadColorTexture('/banners/JsBanner.png')}),
@@ -30,43 +34,48 @@ export default function Cube6Textures() {
         new THREE.MeshBasicMaterial({map: loadColorTexture('/banners/TsBanner.png')}),
     ];
 
-    const cube = new THREE.Mesh(boxGeometry, boxMaterials);
+    loadManager.onLoad = () => {
 
-    scene.add(cube);
-    cubes.push(cube);
+        const cube = new THREE.Mesh(boxGeometry, boxMaterials);
+
+        scene.add(cube);
+        cubes.push(cube);
+
+        function resizeRendererToDisplaySize(renderer) {
+            const canvas = renderer.domElement;
+            const width = canvas.clientWidth;
+            const height = canvas.clientHeight;
+            const needResize = canvas.width !== width || canvas.height !== height;
+            if (needResize) {
+                renderer.setSize(width, height, false);
+            }
+            return needResize;
+        }
+
+        function render(time) {
+            time *= 0.0002;
+
+            if (resizeRendererToDisplaySize(renderer)) {
+                const canvas = renderer.domElement;
+                camera.aspect = canvas.clientWidth / canvas.clientHeight;
+                camera.updateProjectionMatrix();
+            }
+
+            cube.rotation.y = time;
+
+            renderer.render(scene, camera);
+
+            requestAnimationFrame(render);
+        }
+
+        requestAnimationFrame(render);
+
+    }
+
 
     function loadColorTexture(path) {
         const texture = loader.load(path);
         texture.colorSpace = THREE.SRGBColorSpace;
         return texture;
     }
-
-    function resizeRendererToDisplaySize(renderer) {
-        const canvas = renderer.domElement;
-        const width = canvas.clientWidth;
-        const height = canvas.clientHeight;
-        const needResize = canvas.width !== width || canvas.height !== height;
-        if (needResize) {
-            renderer.setSize(width, height, false);
-        }
-        return needResize;
-    }
-
-    function render(time) {
-        time *= 0.0002;
-
-        if (resizeRendererToDisplaySize(renderer)) {
-            const canvas = renderer.domElement;
-            camera.aspect = canvas.clientWidth / canvas.clientHeight;
-            camera.updateProjectionMatrix();
-        }
-
-        cube.rotation.y = time;
-
-        renderer.render(scene, camera);
-
-        requestAnimationFrame(render);
-    }
-
-    requestAnimationFrame(render);
 }

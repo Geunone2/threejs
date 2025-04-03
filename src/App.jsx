@@ -1,11 +1,11 @@
 import './App.css'
-import Cube6Textures from "./component/textures/Cube6Textures.js";
+import CubeWrapping from "./component/textures/CubeWrapping.js";
 
 function App() {
 
     return (
         <>
-            <Cube6Textures />
+            <CubeWrapping />
         </>
     )
 }
