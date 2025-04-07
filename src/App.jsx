@@ -1,11 +1,11 @@
 import './App.css'
-import CubeWrapping from "./component/textures/CubeWrapping.js";
+import LightsControls from "./component/lights/lightsControls.js";
 
 function App() {
 
     return (
         <>
-            <CubeWrapping />
+            <LightsControls />
         </>
     )
 }
