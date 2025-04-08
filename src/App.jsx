@@ -1,11 +1,13 @@
 import './App.css'
-import LightsControls from "./component/lights/lightsControls.js";
+import AmbientLight from "./component/lights/AmbientLight.js";
+import HemisphereLight from "./component/lights/HemisphereLight.js";
+import DirectionLight from "./component/lights/DirectionLight.js";
 
 function App() {
 
     return (
         <>
-            <LightsControls />
+            <DirectionLight />
         </>
     )
 }

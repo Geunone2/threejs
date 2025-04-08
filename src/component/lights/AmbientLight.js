@@ -2,7 +2,7 @@ import * as THREE from 'three'
 import {OrbitControls} from 'three/addons/controls/OrbitControls.js'
 import GUI from "three/examples/jsm/libs/lil-gui.module.min.js";
 
-export default function LightsControls() {
+export default function AmbientLight() {
 
     // 캔버스
     const canvas = document.querySelector('#c');
@@ -64,7 +64,7 @@ export default function LightsControls() {
     scene.add(sphere);
 
 
-    // 조명 추가
+    // 조명(AmbientLight) 추가
 
     const color = 0xFFFFFF;
     const intensity = 1;
