@@ -27,7 +27,7 @@ export default function HemisphereLight() {
     const planeSize = 40;
 
     const loader = new THREE.TextureLoader();
-    const texture = loader.load('/public/examples/checker.png');
+    const texture = loader.load('/examples/checker.png');
     texture.wrapS = THREE.RepeatWrapping;
     texture.wrapT = THREE.RepeatWrapping;
     texture.magFilter = THREE.NearestFilter;
