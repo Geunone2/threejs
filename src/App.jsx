@@ -1,11 +1,11 @@
 import './App.css';
-import SpotLight from "./component/lights/SpotLight.js";
+import RectAreaLight from "./component/lights/RectAreaLight.js";
 
 function App() {
 
     return (
         <>
-            <SpotLight />
+            <RectAreaLight />
         </>
     )
 }
