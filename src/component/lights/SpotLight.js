@@ -2,7 +2,7 @@ import * as THREE from 'three'
 import {OrbitControls} from 'three/addons/controls/OrbitControls.js'
 import GUI from "three/examples/jsm/libs/lil-gui.module.min.js";
 
-export default function DirectionLight() {
+export default function SpotLight() {
 
     // 캔버스
     const canvas = document.querySelector('#c');
@@ -43,17 +43,15 @@ export default function DirectionLight() {
     scene.add(mesh);
 
     // 큐브 객체 생성
-
     const cubeSize = 4;
     const cubeGeo = new THREE.BoxGeometry(cubeSize, cubeSize, cubeSize);
     const cubeMet = new THREE.MeshPhongMaterial({color: '#8AC'});
     const cube = new THREE.Mesh(cubeGeo, cubeMet);
-    cube.position.set(cubeSize + 1, cubeSize + 4, 0);
+    cube.position.set(cubeSize + 1, cubeSize + 2, 0);
     scene.add(cube);
 
 
     // 구체 객체 생성
-
     const sphereRadius = 3;
     const sphereWidthDvisions = 32;
     const sphereHeightDvisions = 16;
@@ -64,11 +62,11 @@ export default function DirectionLight() {
     scene.add(sphere);
 
 
-    // 조명(DirectionLight) 추가
+    // 조명(SpotLight) 추가
     const color = 0xFFFFFF;
-    const intensity = 1;
-    const light = new THREE.DirectionalLight(color, intensity);
-    light.position.set(0, 10, 0);
+    const intensity = 150;
+    const light = new THREE.SpotLight(color, intensity);
+    light.position.set(0, 15, 0);
     light.target.position.set(-5, 0, 0);
     scene.add(light);
     scene.add(light.target);
@@ -80,8 +78,12 @@ export default function DirectionLight() {
     gui.add(light.target.position, 'z', -10, 10);
     gui.add(light.target.position, 'y', 0, 10);
 
+    // 도 단위 헬퍼
+    gui.add(new DegRadHelper(light, 'angle'), 'value', 0, 90).name('angle').onChange(updateLight);
+    gui.add(light, 'penumbra', 0, 1, 0.01);
+
     // DirectionLightHelper 추가
-    const helper = new THREE.DirectionalLightHelper(light);
+    const helper = new THREE.SpotLightHelper(light);
     scene.add(helper);
 
     // helper 위치 업데이트
@@ -96,6 +98,7 @@ export default function DirectionLight() {
         light.target.updateMatrixWorld();
         helper.update();
     }
+
     updateLight();
 
     makeXYZGUI(gui, light.position, 'position', updateLight);
@@ -152,5 +155,21 @@ class ColorGUIHelper {
 
     set value(hexString) {
         this.object[this.prop].set(hexString);
+    }
+}
+
+// 도 단위 조정 헬퍼
+class DegRadHelper {
+    constructor(obj, prop) {
+        this.obj = obj;
+        this.prop = prop;
+    }
+
+    get value() {
+        return THREE.MathUtils.radToDeg(this.obj[this.prop]);
+    }
+
+    set value(v) {
+        this.obj[this.prop] = THREE.MathUtils.degToRad(v);
     }
 }
