@@ -1,11 +1,13 @@
 import './App.css';
-import RectAreaLight from "./component/lights/RectAreaLight.js";
+import PerspectiveCamera from "./component/cameras/PerspectiveCamera.js";
+import TwoPerspectiveCamera from "./component/cameras/TwoPerspectiveCameras.js";
+import TwentySphereCameras from "./component/cameras/TwentySphereCameras.js";
 
 function App() {
 
     return (
         <>
-            <RectAreaLight />
+            <TwentySphereCameras />
         </>
     )
 }
