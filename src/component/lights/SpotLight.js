@@ -82,7 +82,7 @@ export default function SpotLight() {
     gui.add(new DegRadHelper(light, 'angle'), 'value', 0, 90).name('angle').onChange(updateLight);
     gui.add(light, 'penumbra', 0, 1, 0.01);
 
-    // DirectionLightHelper 추가
+    // SpotLightHelper 추가
     const helper = new THREE.SpotLightHelper(light);
     scene.add(helper);
 
