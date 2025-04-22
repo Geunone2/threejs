@@ -1,11 +1,11 @@
 import './App.css';
-import SphereShadows from "./component/shadows/SphereShadows.js";
+import DirectionalLightShadow from "./component/shadows/DirectionalLightShadow.js";
 
 function App() {
 
     return (
         <>
-            <SphereShadows />
+            <DirectionalLightShadow />
         </>
     )
 }
