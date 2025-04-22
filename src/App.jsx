@@ -1,11 +1,11 @@
 import './App.css';
-import SpotLightShadow from "./component/shadows/SpotLightShadow.js";
+import PointLightShadow from "./component/shadows/PointLightShadow.js";
 
 function App() {
 
     return (
         <>
-            <SpotLightShadow />
+            <PointLightShadow />
         </>
     )
 }
