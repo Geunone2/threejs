@@ -55,16 +55,16 @@ export default function DirectionalLight() {
     // 구체 객체 생성
 
     const sphereRadius = 3;
-    const sphereWidthDvisions = 32;
-    const sphereHeightDvisions = 16;
-    const sphereGeo = new THREE.SphereGeometry(sphereRadius, sphereWidthDvisions, sphereHeightDvisions);
+    const sphereWidthDivisions = 32;
+    const sphereHeightDivisions = 16;
+    const sphereGeo = new THREE.SphereGeometry(sphereRadius, sphereWidthDivisions, sphereHeightDivisions);
     const sphereMet = new THREE.MeshPhongMaterial({color: '#8AC'});
     const sphere = new THREE.Mesh(sphereGeo, sphereMet);
     sphere.position.set(-sphereRadius - 1, sphereRadius + 2, 0);
     scene.add(sphere);
 
 
-    // 조명(DirectionLight) 추가
+    // 조명(DirectionalLight) 추가
     const color = 0xFFFFFF;
     const intensity = 1;
     const light = new THREE.DirectionalLight(color, intensity);
