@@ -1,11 +1,11 @@
 import './App.css';
-import DirectionalLightShadow from "./component/shadows/DirectionalLightShadow.js";
+import SpotLightShadow from "./component/shadows/SpotLightShadow.js";
 
 function App() {
 
     return (
         <>
-            <DirectionalLightShadow />
+            <SpotLightShadow />
         </>
     )
 }
