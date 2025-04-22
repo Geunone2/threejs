@@ -1,11 +1,11 @@
 import './App.css';
-import OrthographicCamera2 from "./component/cameras/OrthographicCamera2.js";
+import SphereShadows from "./component/shadows/SphereShadows.js";
 
 function App() {
 
     return (
         <>
-            <OrthographicCamera2 />
+            <SphereShadows />
         </>
     )
 }
