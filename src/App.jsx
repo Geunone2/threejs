@@ -1,11 +1,11 @@
 import './App.css';
-import PointLightShadow from "./component/shadows/PointLightShadow.js";
+import CubesFog from "./component/Fogs/CubesFog.js";
 
 function App() {
 
     return (
         <>
-            <PointLightShadow />
+            <CubesFog />
         </>
     )
 }
