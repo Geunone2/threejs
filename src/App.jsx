@@ -1,11 +1,11 @@
 import './App.css';
-import CubesFog from "./component/Fogs/CubesFog.js";
+import CubesRenderTargets from "./component/RenderTargets/CubesRenderTargets.js";
 
 function App() {
 
     return (
         <>
-            <CubesFog />
+            <CubesRenderTargets />
         </>
     )
 }
