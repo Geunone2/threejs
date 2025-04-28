@@ -1,11 +1,11 @@
 import './App.css';
-import CubesRenderTargets from "./component/RenderTargets/CubesRenderTargets.js";
+import RenderingOnDemand2 from "./Tips/RenderingOnDemand/RenderingOnDemand2.js";
 
 function App() {
 
     return (
         <>
-            <CubesRenderTargets />
+            <RenderingOnDemand2 />
         </>
     )
 }
