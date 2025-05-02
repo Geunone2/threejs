@@ -1,11 +1,11 @@
 import './App.css';
-import RenderingOnDemand2 from "./Tips/RenderingOnDemand/RenderingOnDemand2.js";
+import MakeMCVE from "./Tips/DebuggingJavaScript/MCVE/MakeMCVE.js";
 
 function App() {
 
     return (
         <>
-            <RenderingOnDemand2 />
+            <MakeMCVE />
         </>
     )
 }

@@ -10,6 +10,17 @@ html, body {
     display: block;
 }
 
+#debug {
+    position: absolute;
+    left: 1em;
+    top: 1em;
+    padding: 1em;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-family: monospace;
+}
+
+
 /*#loading {*/
 /*    position: fixed;*/
 /*    top: 0;*/
