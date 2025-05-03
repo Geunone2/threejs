@@ -1,11 +1,11 @@
 import './App.css';
-import MakeMCVE from "./Tips/DebuggingJavaScript/MCVE/MakeMCVE.js";
+import TakeAScreenShot from "./Tips/ScreenShot/TakeAScreenShot.js";
 
 function App() {
 
     return (
         <>
-            <MakeMCVE />
+            <TakeAScreenShot />
         </>
     )
 }
