@@ -1,11 +1,11 @@
 import './App.css';
-import TakeAScreenShot from "./Tips/ScreenShot/TakeAScreenShot.js";
+import CanvasTransparent from "./Tips/CanvasTransparent/CanvasTransparent.js";
 
 function App() {
 
     return (
         <>
-            <TakeAScreenShot />
+            <CanvasTransparent />
         </>
     )
 }
