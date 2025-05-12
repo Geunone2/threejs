@@ -1,11 +1,11 @@
 import './App.css';
-import CanvasTransparent from "./Tips/CanvasTransparent/CanvasTransparent.js";
+import WebGLGlobe3D from "./Optimization/OptimizingLotsOfObjects/WebGLGlobe3D.js";
 
 function App() {
 
     return (
         <>
-            <CanvasTransparent />
+            <WebGLGlobe3D />
         </>
     )
 }
