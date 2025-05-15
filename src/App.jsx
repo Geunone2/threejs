@@ -1,11 +1,11 @@
 import './App.css';
-import WebGLGlobe3D from "./Optimization/OptimizingLotsOfObjects/WebGLGlobe3D.js";
+import WebGLGlobe3DAnimated from "./Optimization/OptimizingLotsOfObjectsAnimated/WebGLGlobe3DAnimated.js";
 
 function App() {
 
     return (
         <>
-            <WebGLGlobe3D />
+            <WebGLGlobe3DAnimated/>
         </>
     )
 }
