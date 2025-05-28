@@ -1,10 +1,10 @@
 import './App.css';
-import {OffscreenCanvasWPicking} from "./Optimization/OffscreenCanvas/offscreencanvas-w-picking.js";
+import {OffScreenOrbitControlsPicking} from "./Optimization/OffscreenCanvas/offscreencanvas-w-orbitcontrols-picking.js";
 
 function App() {
     return (
         <>
-            <OffscreenCanvasWPicking />
+            <OffScreenOrbitControlsPicking />
         </>
     )
 }
