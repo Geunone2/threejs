@@ -1,11 +1,8 @@
 import './App.css';
-import {OffScreenOrbitControlsPicking} from "./Optimization/OffscreenCanvas/offscreencanvas-w-orbitcontrols-picking.js";
-
+import LoadObj from "./Solutions/loadObj.js";
 function App() {
     return (
-        <>
-            <OffScreenOrbitControlsPicking />
-        </>
+        <LoadObj />
     )
 }
 
