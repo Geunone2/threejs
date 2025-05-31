@@ -45,7 +45,7 @@ export default function LoadObj() {
     // #2 특정 재질을 찾아, 수동으로 설정
     {
         const mtlLoader = new MTLLoader();
-        mtlLoader.load('3DModels/windmill_001.mtl', (mtl) => {
+        mtlLoader.load('3DModels/windmill1/windmill_001.mtl', (mtl) => {
             mtl.preload();
             const objLoader = new OBJLoader();
             for (const material of Object.values(mtl.materials)) {
@@ -53,7 +53,7 @@ export default function LoadObj() {
                 console.log(Object.values(mtl.materials));
             }
             objLoader.setMaterials(mtl);
-            objLoader.load('3DModels/windmill_001.obj', (root) => {
+            objLoader.load('3DModels/windmill1/windmill_001.obj', (root) => {
                 scene.add(root);
             });
         })
@@ -144,7 +144,7 @@ export default function LoadObj() {
 //             objLoader.load('3DModels/windmill_001.obj', (root) => {
 //                 const materials = {
 //                     Material: new THREE.MeshBasicMaterial({}),
-//                     windmill: new THREE.MeshBasicMaterial({}),
+//                     windmill2: new THREE.MeshBasicMaterial({}),
 //                 };
 //                 root.traverse(node => {
 //                     const material = materials[node.material?.name];

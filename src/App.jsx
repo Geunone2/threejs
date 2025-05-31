@@ -1,8 +1,8 @@
 import './App.css';
-import LoadObj from "./Solutions/loadObj.js";
+import {LoadObj2} from "./Solutions/LoadObjFile/loadObj2.js";
 function App() {
     return (
-        <LoadObj />
+        <LoadObj2/>
     )
 }
 
