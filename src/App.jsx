@@ -1,8 +1,8 @@
 import './App.css';
-import {LoadObj2} from "./Solutions/LoadObjFile/loadObj2.js";
+import {LoadGLTF} from "./Solutions/LoadGLTFFile/loadGLTF.js";
 function App() {
     return (
-        <LoadObj2/>
+        <LoadGLTF />
     )
 }
 
