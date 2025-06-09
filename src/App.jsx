@@ -1,8 +1,8 @@
 import './App.css';
-import {LoadGLTF} from "./Solutions/LoadGLTFFile/loadGLTF.js";
+import Backgrounds from "./Solutions/BackgorundsAndSkyBoxes/Backgrounds.js";
 function App() {
     return (
-        <LoadGLTF />
+        <Backgrounds />
     )
 }
 
