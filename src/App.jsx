@@ -1,8 +1,8 @@
 import './App.css';
-import Backgrounds from "./Solutions/BackgorundsAndSkyBoxes/Backgrounds.js";
+import Transparency3 from "./Solutions/Transparency/Transparency3.js";
 function App() {
     return (
-        <Backgrounds />
+        <Transparency3 />
     )
 }
 
