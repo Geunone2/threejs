@@ -2,17 +2,12 @@ html, body {
     height: 100%;
     margin: 0;
 }
-
-#c {
-    position: fixed;
-    left: 0;
-    top: 0;
+canvas {
     width: 100%;
     height: 100%;
     display: block;
-    z-index: -1;
 }
-.diagram {
+*[data-diagram] {
     display: inline-block;
     width: 5em;
     height: 3em;
@@ -25,32 +20,34 @@ html, body {
     float: right;
     margin-left: .25em;
 }
-
 p {
     margin: 1em auto;
     max-width: 500px;
     font-size: xx-large;
 }
 
-#ui {
-    position: absolute;
-    left: 1em;
-    top: 1em;
-}
-#ui>div {
-    font-size: 15pt;
-    padding: 1em;
-    display: block;
-}
-#ui>div.selected {
-    color: red;
-}
-@media (max-width: 700px) {
-    #ui>div {
-        display: block;
-        padding: .25em;
-    }
-}
+/*#ui {*/
+/*    position: absolute;*/
+/*    left: 1em;*/
+/*    top: 1em;*/
+/*}*/
+
+/*#ui > div {*/
+/*    font-size: 15pt;*/
+/*    padding: 1em;*/
+/*    display: block;*/
+/*}*/
+
+/*#ui > div.selected {*/
+/*    color: red;*/
+/*}*/
+
+/*@media (max-width: 700px) {*/
+/*    #ui > div {*/
+/*        display: block;*/
+/*        padding: .25em;*/
+/*    }*/
+/*}*/
 
 /*#noOffscreenCanvas {*/
 /*    display: flex;*/
