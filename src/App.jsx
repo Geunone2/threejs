@@ -1,8 +1,9 @@
 import './App.css';
-import MultipleScene from "./Solutions/MultipleCanvasesAndScenes/MultipleScene.js";
+import Picking from "./Solutions/Picking/picking.js";
+
 function App() {
     return (
-        <MultipleScene />
+        <Picking/>
     )
 }
 
