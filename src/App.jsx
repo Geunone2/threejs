@@ -1,8 +1,9 @@
 import './App.css';
-import MultipleScene from "./Solutions/MultipleCanvasesAndScenes/MultipleScene.js";
+import PostProcessing from "./Solutions/PostProcessing/PostProcessing.js";
+
 function App() {
     return (
-        <MultipleScene />
+        <PostProcessing/>
     )
 }
 
