@@ -1,9 +1,9 @@
 import './App.css';
-import PostProcessing from "./Solutions/PostProcessing/PostProcessing.js";
+import ShaderToy2 from "./Solutions/ShaderToy/ShaderToy2.js";
 
 function App() {
     return (
-        <PostProcessing/>
+        <ShaderToy2/>
     )
 }
 
