@@ -1,9 +1,9 @@
 import './App.css';
-import ShaderToy2 from "./Solutions/ShaderToy/ShaderToy2.js";
+import HTMLGlobe3D from "./Solutions/HTMLText3D/HTMLGlobe3D.js";
 
 function App() {
     return (
-        <ShaderToy2/>
+        <HTMLGlobe3D />
     )
 }
 
