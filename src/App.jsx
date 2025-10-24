@@ -1,9 +1,9 @@
 import './App.css';
-import HTMLGlobe3D from "./Solutions/HTMLText3D/HTMLGlobe3D.js";
+import HumanCanvasTexture from "./Solutions/CanvasTexture/HumanCanvasTexture.js";
 
 function App() {
     return (
-        <HTMLGlobe3D />
+        <HumanCanvasTexture />
     )
 }
 
