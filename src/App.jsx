@@ -1,9 +1,9 @@
 import './App.css';
-import HumanCanvasTexture from "./Solutions/CanvasTexture/HumanCanvasTexture.js";
+import CleanUpGLTF from "./Solutions/FreeingResources/CleanUpGLTF.js";
 
 function App() {
     return (
-        <HumanCanvasTexture />
+        <CleanUpGLTF />
     )
 }
 
