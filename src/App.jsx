@@ -1,9 +1,9 @@
 import './App.css';
-import CleanUpGLTF from "./Solutions/FreeingResources/CleanUpGLTF.js";
+import VoxelMinecraft from "./Solutions/VoxelGeometry/VoxelMinecraft.js";
 
 function App() {
     return (
-        <CleanUpGLTF />
+        <VoxelMinecraft/>
     )
 }
 
