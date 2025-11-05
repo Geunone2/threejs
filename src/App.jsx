@@ -1,9 +1,9 @@
 import './App.css';
-import VoxelMinecraft from "./Solutions/VoxelGeometry/VoxelMinecraft.js";
+import {MakingGame3} from "./Solutions/MakingGame/MakingGame3.js";
 
 function App() {
     return (
-        <VoxelMinecraft/>
+        <MakingGame3/>
     )
 }
 
