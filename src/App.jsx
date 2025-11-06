@@ -1,9 +1,9 @@
 import './App.css';
-import {MakingGame3} from "./Solutions/MakingGame/MakingGame3.js";
+import CustomBufferGeometry2 from "./Fundamentals/CustomBufferGeometry/CustomBufferGeometry2.js";
 
 function App() {
     return (
-        <MakingGame3/>
+        <CustomBufferGeometry2/>
     )
 }
 
